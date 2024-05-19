@@ -32,4 +32,21 @@ const page2: pages = {
   status: "close",
 };
 
+interface AnimalWOT {
+  noob: number;
+  pro?: number;
+}
+
+interface ExtendedAnimalWot extends AnimalWOT {
+  medium: number;
+}
+
+function getStat(stat: AnimalWOT): ExtendedAnimalWot {
+  const object: ExtendedAnimalWot = { ...stat, medium: 52 };
+  console.log(object);
+
+  return object;
+}
+
+getStat({ noob: 45 });
 export {};
